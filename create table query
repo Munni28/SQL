@@ -1,0 +1,1 @@
+create table student(student_id int,student_name vachar(20),student_batch_name varchar(10));
