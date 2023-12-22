@@ -1,0 +1,37 @@
+create database LifeStyle;
+use LifeStyle;
+
+create table Customer_info(
+customer_Id int ,
+customer_Name varchar(255),
+customer_Email_Id varchar(255),
+customer_Password int);
+desc Customer_info;
+
+
+create table Product_details (
+product_Id int Primary Key,
+product_Name varchar(255),
+product_cost int);
+desc Product_details;
+insert into Product_details (product_Id, product_Name, product_cost)
+Values
+('1', 'Party Wear', '2000 '),
+('2', 'Long Frock', '1899'),
+('3', 'Maxi Dress', '899'),
+('5', 'Floral Dress','1499'),
+('6', 'Anarkali', '1499');
+select * from Product_details;
+
+
+create table cart (
+cart_id int,
+quantity int,
+constraint c_cart_id primary key (cart_id),
+constraint foreign key (customer_id) references Customer(customer_id));
+/*foreign key (product_id) references Product(product_id));*/
+
+
+
+
+
