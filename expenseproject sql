@@ -1,0 +1,7 @@
+use suchi;
+create table expenses(exp_id int,user_id int, exp_cat_id int,exp_amount int,exp_des varchar(80),exp_Date varchar(20));
+desc expenses;
+create table user_info(user_id int,user_name varchar(20),user_password int);
+desc user_info;
+create table exp_categories(exp_cat_id int primary key,exp_cat_desc varchar(50));
+desc exp_categories;
